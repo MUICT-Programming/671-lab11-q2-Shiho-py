@@ -1,17 +1,9 @@
 # YOUR CODE HERE
-def sumation(numm, operation) :
-    lst1 = []
-    lst2 = []
+def sumation(lst1,lst2, operation) :
+    
     cal_list = []
-    for i in range(numm) :
-        a = int(input())
-        lst1.append(a)
 
-    for l in range(numm) :
-        b = int(input())
-        lst2.append(b)
-
-    for c in range(numm) :
+    for c in range(len(lst1)) :
         c = lst1[c] + lst2[c]
         cal_list.append(c)
 
@@ -32,7 +24,17 @@ def find_min_max(updated_list) :
 
 
 num = int(input())
-# result1 = sumation(num)
-result2 = sumation(num, find_min_max)
-# print(result1)
+
+lst1 = []
+lst2 = []
+
+for i in range(num) :
+        a = int(input())
+        lst1.append(a)
+
+for l in range(num) :
+    b = int(input())
+    lst2.append(b)
+
+result2 = sumation(lst1,lst2, find_min_max)
 print(result2)
